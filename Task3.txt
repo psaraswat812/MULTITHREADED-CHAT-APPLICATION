@@ -1,0 +1,56 @@
+Internship Task - 3: Multithreaded Chat Application
+
+Submitted by: Puranjay Saraswat  
+Technology Used: Java  
+Concepts: Sockets, Multithreading, Client-Server Communication
+
+Description:
+This task implements a real-time chat application using Java. It consists of:
+1. ChatServer.java - a multithreaded server that handles multiple clients concurrently
+2. ChatClient.java - a client that connects to the server and sends/receives messages
+
+Key Features:
+- Uses Java Sockets to create client-server connection over TCP
+- Uses multithreading on server side to manage multiple clients simultaneously
+- Broadcasts each client's message to all connected users in real-time
+- Simple command-line interface with clear separation of server and client code
+- Gracefully handles disconnection of users
+
+How It Works:
+- The server waits on port 1234 and listens for incoming client connections
+- Each connected client is assigned a new thread
+- The server maintains a set of client output streams for broadcasting
+- The client reads messages from user input and sends them to the server
+- Server sends received messages to all other connected clients
+
+Sample Flow:
+Client 1:
+🧑 Enter your name: Aisha
+[Aisha]: Hello!
+
+Client 2:
+🧑 Enter your name: Rahul
+[Aisha]: Hello!
+[Rahul]: Hi Aisha!
+
+To Run:
+1. Compile both files:
+   javac ChatServer.java ChatClient.java
+
+2. Run server:
+   java ChatServer
+
+3. Run client in separate terminals:
+   java ChatClient
+
+Note:
+- All logic is built with core Java libraries.
+- No external dependencies or frameworks are required.
+- You can run multiple ChatClient instances to simulate different users.
+
+Future Enhancements (optional):
+- Add user authentication
+- Store chat history in a file
+- Build a GUI with Swing
+
+This implementation demonstrates core Java networking and threading skills in a clear and modular format.
