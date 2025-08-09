@@ -5,6 +5,7 @@ INTERN ID : CT04DZ1931
 DOMAIN : JAVA PROGRAMMING
 DURATION : 4 WEEKS
 MENTOR : NEELA SANTOSH
+
 DESCRIPTION : 
 The ChatServer$ClientHandler class is a decompiled inner class of a Java-based chat server program. It extends the Thread class and is designed to handle communication with one client in a multi-client environment. Each client connecting to the server is managed by a separate thread instance of this class, allowing for real-time simultaneous communication between multiple users.
 
